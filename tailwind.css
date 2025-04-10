@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Manager</title>
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Optional: Google Fonts for custom fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Optional: Custom Styling -->
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+  
+  /* Custom styles */
+  .sidebar {
+      backdrop-filter: blur(10px);
+      background-color: rgba(30, 41, 59, 0.85);
+  }
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Main content container -->
+  <div class="min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-indigo-600 text-white p-4 shadow-md">
+      <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-2xl font-semibold">Task Manager</h1>
+        <nav>
+          <a href="login.php" class="text-white hover:text-indigo-200 px-4 py-2">Login</a>
+          <a href="register.php" class="text-white hover:text-indigo-200 px-4 py-2">Register</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Section -->
+    <main class="flex-1 container mx-auto p-6">
+      <h2 class="text-xl font-semibold text-gray-900 mb-4">Your Tasks</h2>
+      
+      <!-- Table of Tasks -->
+      <div class="overflow-x-auto bg-white shadow-md rounded-lg">
+        <table class="min-w-full table-auto text-sm text-left">
+          <thead class="bg-gray-200 text-gray-700">
+            <tr>
+              <th class="px-4 py-2">#</th>
+              <th class="px-4 py-2">Title</th>
+              <th class="px-4 py-2">Description</th>
+              <th class="px-4 py-2">Deadline</th>
+              <th class="px-4 py-2">Status</th>
+              <th class="px-4 py-2">Actions</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-800">
+            <tr class="border-b hover:bg-gray-50">
+              <td class="px-4 py-2">1</td>
+              <td class="px-4 py-2 font-medium">Complete Report</td>
+              <td class="px-4 py-2">Finish the monthly report for client review.</td>
+              <td class="px-4 py-2">2025-04-20</td>
+              <td class="px-4 py-2 text-yellow-600 font-semibold">⏳ Pending</td>
+              <td class="px-4 py-2">
+                <button class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700">Mark as Done</button>
+              </td>
+            </tr>
+            <tr class="border-b hover:bg-gray-50">
+              <td class="px-4 py-2">2</td>
+              <td class="px-4 py-2 font-medium">Design New Website</td>
+              <td class="px-4 py-2">Start the redesign of the company website.</td>
+              <td class="px-4 py-2">2025-04-25</td>
+              <td class="px-4 py-2 text-green-600 font-semibold">✔ Completed</td>
+              <td class="px-4 py-2">
+                <button disabled class="bg-gray-400 text-white px-4 py-2 rounded-md cursor-not-allowed">Completed</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-indigo-600 text-white p-4 mt-6">
+      <div class="container mx-auto text-center">
+        <p>&copy; 2025 Task Manager. All rights reserved.</p>
+      </div>
+    </footer>
+    
+  </div>
+</body>
+</html>
